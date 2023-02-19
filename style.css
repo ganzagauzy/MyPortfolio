@@ -2944,15 +2944,27 @@
 }
 
 /* tabs */
-.work {
-  display: none !important;
+.tab {
+  margin-top: 30px;
+  display: inline-block;
+  background-color: #ccc;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
 }
-.work.active {
-  display: block !important;
+button {
+  border: none;
+  border-radius: 10px;
 }
-.edu {
-  display: none !important;
+/* Style the active tab button */
+button.active {
+  background-color: #db545a;
+  border-radius: 10px;
 }
-.edu.active {
-  display: block !important;
+
+/* Hide the tab content */
+.tabcontent {
+  display: none;
+  padding: 20px;
+  /* border: 1px solid #ccc; */
 }

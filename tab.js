@@ -1,23 +1,22 @@
-let tabtwo = document.querySelector('#working');
-let work = document.querySelector('.work');
+// Open the first tab by default
+document.getElementById("Tab1").style.display = "block";
 
+function openTab(evt, tabName) {
+  // Hide all tab content
+  var tabcontent = document.getElementsByClassName("tabcontent");
+  for (var i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
 
-let tab0ne = document.querySelector('.education');
-let edu = document.querySelector('.edu');
+  // Deactivate all tab buttons
+  var tabs = document.getElementsByClassName("tab");
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove("active");
+  }
 
-
-tabtwo.onclick = () =>{
-    console.log("hi working");
-    // edu.classList.toggle('fa-times')
-    work.classList.toggle('active');
-    // edu.classList.remove('active')
+  // Show the selected tab content and activate its button
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.classList.add("active");
 }
 
-
-tab0ne.onclick = () =>{
-    console.log("hi education");
-    // edu.classList.toggle('fa-times')
-    work.classList.toggle('active');
-    // edu.classList.remove('active')
-}
-
+document.getElementById("year").innerHTML = new Date().getFullYear();
